@@ -37,7 +37,7 @@ export default class CoffeeShop {
   drawFlavors(coffeeShopIndex) {
     let FlavorsTremplate = ""
     this.flavors.forEach((flav, flavorIndex) => {
-      flavorIndex += `<li>${flav}<span onsubmit="app.controllers.pizzaController.deleteTopping(${coffeeShopIndex}, ${flavorIndex})">X</span></li>`
+      FlavorsTremplate += `<li>${flav}<span onsubmit="app.controllers.coffeeController.deleteFlavors(${coffeeShopIndex}, ${flavorIndex})">X</span></li>`
     });
     return FlavorsTremplate
   }

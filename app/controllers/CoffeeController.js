@@ -25,8 +25,11 @@ export default class CoffeeController {
     event.preventDefault()
     let form = event.target
     let newCoffee = {
-      name: form.name.value
-
+      name: form.name.value,
+      type: form.type.value,
+      // flavors: form.flavors.value,
+      // size: form.size.value,
+      // price: form.price.value
     }
     _coffeeService.addCoffeeShop(newCoffee)
     _draw()
